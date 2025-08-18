@@ -3,6 +3,7 @@ import Layout from "./components/user/Layout";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from "./components/common/ScrollToTop";
+import PrivateRoute from './components/PrivateRoute';
 
 // user pages
 import Home from "./pages/user/Home";
@@ -48,7 +49,7 @@ return (
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="products" element={<Products />} />
+          <Route path="products" element={<PrivateRoute><Products /></PrivateRoute>}} />
           <Route path="products/:id" element={<ProductDetail />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
@@ -79,9 +80,4 @@ return (
 }
 
 export default App;
-
-
-
-//usage....
-//in element =  <ProtectedRoute><Checkout /></ProtectedRoute>
     
