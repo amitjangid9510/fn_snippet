@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/user/Layout";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ScrollToTop from "./components/common/ScrollToTop";
 
 // user pages
 import Home from "./pages/user/Home";
@@ -42,7 +43,8 @@ return (
         draggable
         pauseOnHover
       />
-      
+        
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
