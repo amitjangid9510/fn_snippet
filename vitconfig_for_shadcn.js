@@ -14,3 +14,33 @@ export default defineConfig({
     },
   },
 })
+
+//-------------commands------------
+// extensions :  Material Icon Theme  ,  Turbo Console Log  , Tailwind CSS IntelliSense , Save Typing 
+//npm update -g 
+// https://v3.tailwindcss.com/docs/guides/vite
+// jsconfig.json
+
+//{
+//  "compilerOptions": {
+//    "baseUrl": ".",
+//    "paths": {
+//      "@/*": ["./src/*"]
+//    }
+//  }
+//}
+
+//  npx shadcn@latest init
+//  npx shadcn@latest add --all
+// help : -   https://ui.shadcn.com/docs/components
+
+//  npm install react-router-dom axios @reduxjs/toolkit redux-persist react-redux react-hook-form @hookform/resolvers yup
+//  npm install react-router-dom axios @reduxjs/toolkit redux-persist react-redux
+//  npm install react-hook-form @hookform/resolvers yup
+
+
+
+
+
+
+
