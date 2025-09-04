@@ -39,7 +39,7 @@ export default defineConfig({
 //  npm install react-hook-form @hookform/resolvers yup
 
 
-
+//--------------# Windows ---------------
 //mkdir src\pages
 //mkdir src\layout
 //mkdir src\utils
@@ -52,6 +52,15 @@ export default defineConfig({
 //echo > src\validations\SchemaValidation.js
 //echo > src\utils\api.js
 
+
+//--------------# linux ---------------
+
+//mkdir -p src/pages src/layout src/utils src/store/features src/validations
+
+//touch src/store/store.js
+//touch src/layout/Layout.jsx
+//touch src/validations/SchemaValidation.js
+//touch src/utils/api.js
 
 
 
