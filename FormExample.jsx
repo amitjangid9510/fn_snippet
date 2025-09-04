@@ -27,7 +27,7 @@ const onSubmit = async (data) => {
     if (data.file && data.file.length > 0) {
       formData.append("file", data.file[0]);
     }
-
+    //dispatch(submitForm(formData));
     const response = await axios.post("https://your-api-url.com/submit", formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
