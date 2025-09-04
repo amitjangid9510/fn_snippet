@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { formSchema } from "./validationSchema";
+import { formSchema } from "./ValidationSchema";
 
-export default function FormExample() {
+export default function App() {
   const {
     register,
     handleSubmit,
@@ -11,10 +11,38 @@ export default function FormExample() {
     resolver: yupResolver(formSchema),
   });
 
-  const onSubmit = (data) => {
-    console.log("Form Data:", data);
-    alert("Form submitted! Check console.");
-  };
+const onSubmit = async (data) => {
+  try {
+    const formData = new FormData();
+
+    formData.append("username", data.username);
+    formData.append("email", data.email);
+    formData.append("password", data.password);
+    formData.append("age", data.age);
+    formData.append("gender", data.gender);
+    formData.append("terms", data.terms);
+    formData.append("bio", data.bio || "");
+    formData.append("dob", data.dob);
+
+    if (data.file && data.file.length > 0) {
+      formData.append("file", data.file[0]);
+    }
+
+    const response = await axios.post("https://your-api-url.com/submit", formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+    // send only datat , when not sending image
+    alert("Form submitted successfully with image.");
+    console.log(response.data);
+
+  } catch (error) {
+    console.error("Submit error:", error);
+    alert("Error submitting form. Please try again.");
+  }
+};
+
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate>
