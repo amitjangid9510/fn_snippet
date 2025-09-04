@@ -40,6 +40,19 @@ export default defineConfig({
 
 
 
+//mkdir src\pages
+//mkdir src\layout
+//mkdir src\utils
+//mkdir src\store
+//mkdir src\store\features
+//mkdir src\validations
+
+//echo > src\store\store.js
+//echo > src\layout\Layout.jsx
+//echo > src\validations\SchemaValidation.js
+//echo > src\utils\api.js
+
+
 
 
 
