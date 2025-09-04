@@ -47,11 +47,10 @@ export default defineConfig({
 //mkdir src\store\features
 //mkdir src\validations
 
-//echo > src\store\store.js
-//echo > src\layout\Layout.jsx
-//echo > src\validations\SchemaValidation.js
-//echo > src\utils\api.js
-
+//New-Item -Path src\store\store.js -ItemType File
+//New-Item -Path src\layout\Layout.jsx -ItemType File
+//New-Item -Path src\validations\SchemaValidation.js -ItemType File
+//New-Item -Path src\utils\api.js -ItemType File
 
 //--------------# linux ---------------
 
